@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Food Donation Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f2f2f2;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #e8e8e8;
+      transition: background-color 0.3s ease;
+    }
+
+    .form-control:focus {
+      outline: none;
+      background-color: #d3d3d3;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background-color: #4e0958;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #650f4b;
+    }
+  </style>
+</head>
+
+<body>
+  <form action="#" method="POST">
+    <h2>Food Donation</h2>
+
+    <div class="form-group">
+      <label for="donationType">Donation Type:</label>
+      <div>
+        <label>
+          <input type="radio" name="donationType" value="individual" checked> Individual
+        </label>
+        <label>
+          <input type="radio" name="donationType" value="restaurant"> Restaurant
+        </label>
+        <label>
+          <input type="radio" name="donationType" value="someoneInNeed"> Someone in Need
+        </label>
+      </div>
+    </div>
+
+    <div id="individualSection" class="form-group">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+    </div>
+
+    <div id="restaurantSection" class="form-group" style="display: none;">
+      <label for="restaurantName">Restaurant Name:</label>
+      <input type="text" id="restaurantName" name="restaurantName" class="form-control" placeholder="Restaurant Name" required>
+    </div>
+
+    <div id="someoneInNeedSection" class="form-group" style="display: none;">
+      <label for="needName">Name:</label>
+      <input type="text" id="needName" name="needName" class="form-control" placeholder="Your Name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" class="form-control" placeholder="Your Phone Number" required>
+    </div>
+
+    <div class="form-group">
+      <label for="address">Address:</label>
+      <textarea id="address" name="address" class="form-control" placeholder="Your Address" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="foodDescription">Food Description:</label>
+      <textarea id="foodDescription" name="foodDescription" class="form-control" placeholder="Describe the food you want to donate" required></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary">Submit</button>
+  </form>
+
+  <script>
+    // Function to show or hide the sections based on the selected donation type
+    function toggleSections() {
+      var donationType = document.querySelector('input[name="donationType"]:checked').value;
+
+      var individualSection = document.getElementById("individualSection");
+      var restaurantSection = document.getElementById("restaurantSection");
+      var someoneInNeedSection = document.getElementById("someoneInNeedSection");
+
+      if (donationType === "individual") {
+        individualSection.style.display = "block";
+        restaurantSection.style.display = "none";
+        someoneInNeedSection.style.display = "none";
+      } else if (donationType === "restaurant") {
+        individualSection.style.display = "none";
+        restaurantSection.style.display = "block";
+        someoneInNeedSection.style.display = "none";
+      } else if (donationType === "someoneInNeed") {
+        individualSection.style.display = "none";
+        restaurantSection.style.display = "none";
+        someoneInNeedSection.style.display = "block";
+      }
+    }
+
+    // Event listener to toggle sections when the donation type changes
+    var donationTypeInputs = document.querySelectorAll('input[name="donationType"]');
+    Array.from(donationTypeInputs).forEach(function(input) {
+      input.addEventListener('change', toggleSections);
+    });
+  </script>
+  <!DOCTYPE html>
+<html>
+<head>
+  <title>Food Donation Form</title>
+  <style>
+    /* Styles for the form */
+  </style>
+</head>
+<body>
+  <!-- Your existing HTML code for the form -->
+  <section class="individual-section">
+    <!-- Individual donation form fields -->
+  </section>
+  
+  <section class="restaurant-section">
+    <!-- Restaurant donation form fields -->
+  </section>
+  
+  <section class="someone-in-need-section">
+    <!-- Someone in need donation form fields -->
+  </section>
+
+  <script>
+    // Function to show or hide the sections based on the selected donation type
+    function toggleSections() {
+      // Code to toggle sections based on donation type
+    }
+
+    // Event listener to toggle sections when the donation type changes
+    var donationTypeInputs = document.querySelectorAll('input[name="donationType"]');
+    Array.from(donationTypeInputs).forEach(function(input) {
+      input.addEventListener('change', toggleSections);
+    });
+
+    // Get the form element
+    var form = document.getElementById("donationForm");
+
+    // Add event listener for form submission
+    form.addEventListener("submit", function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Display the success message
+      var successMessage = document.getElementById("successMessage");
+      successMessage.style.display = "block";
+
+      // You can perform other actions here, such as sending the form data to a server-side script using AJAX
+
+      // Reset the form
+      form.reset();
+    });
+  </script>
+</body>
+</html>
+
+
+</body>
+
+</html>

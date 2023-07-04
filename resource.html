@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('./images/fw.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-color: #a0a0f6;
+        }
+        
+        .resources-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .resources {
+            margin-top: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        
+        .resources h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        
+        .resource-card {
+            background-color: #64abe1;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s ease;
+            cursor: pointer;
+            flex: 1 1 calc(50% - 20px);
+            max-width: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .resource-card:hover {
+            box-shadow: 0 4px 8px rgba(168, 39, 39, 0.1);
+        }
+        
+        .resource-card h3 {
+            font-size: 20px;
+            font-weight: bold;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+        
+        .resource-card p {
+            color: #eae7da;
+            margin-top: 0;
+        }
+        
+        .resource-card:hover h3 {
+            color: #3451e1;
+        }
+        
+        .resource-card:hover p {
+            color: #040101;
+        }
+
+        @media (max-width: 600px) {
+          .resource-card {
+            flex: 1 1 100%;
+          }
+        }
+    </style>
+    <title>Document</title>
+    <script>
+        function openArticle(url) {
+            window.open(url, '_blank');
+        }
+    </script>
+</head>
+<body>
+    <div class="resources-container">
+        <h2>Resources</h2>
+        <section class="resources">
+            <div class="resource-card" onclick="openArticle('article1.html')">
+                <h3>Government Initiatives</h3>
+                <p>Minimize food waste, ensure food security, and support sustainable practices for a healthier planet.
+                </p>
+            </div>
+            <div class="resource-card" onclick="openArticle('ar2.html')">
+                <h3>Ways to Prevent Food Wastage</h3>
+                <p>Reduce food waste, secure food supply, and promote sustainability for a healthier planet. Support initiatives and practice mindful consumption.
+                </p>
+            </div>
+        
+        
+            <div class="resource-card" onclick="openArticle('article3.html')">
+                <h3>Statistical Reports</h3>
+                <p>Analyze statistical reports to gain insights and make informed decisions for addressing food waste challenges effectively.</p>
+            </div>
+            <div class="resource-card" onclick="openArticle('article4.html')">
+                <h3>Local restaurants</h3>
+                <p>Support local restaurants that prioritize sustainable practices, minimize food waste, and contribute to the community's well-being.
+
+
+
+
+                </p>
+            </div>
+       
+    </div>
+</body>
+</html>
