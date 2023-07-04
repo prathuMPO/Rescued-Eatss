@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rescued Eats</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
     <style>
         body {
             background-image: url('./images/la2.jpg');
@@ -19,19 +21,25 @@
             text-align: center;
         }
     </style>
+  
 </head>
 <body>
-    <header>
-        <h1>Rescued Eats</h1>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="resource.html">Resources</a></li>
-                <li><a href="login.html">Login/Signup</a></li>
+    <nav>
+        <div class="navbar">
+            <div class="logo">Rescued Eats</div>
+            <input type="checkbox" id="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </label>
+            
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li><a href="./resource.html">Resource</a></li>
+                <li><a href="./login.html">Login/Signup</a></li>
             </ul>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <section class="hero">
         <h2>Welcome to Rescued Eats!</h2><br><br><br>
@@ -42,5 +50,18 @@
     <footer>
         <p>&copy; 2023 Zero Food Waste. All rights reserved.</p>
     </footer>
+
+    
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var navToggle = document.getElementById('nav-toggle');
+        var navMenu = document.querySelector('.navbar .nav-menu');
+
+        navToggle.addEventListener('click', function () {
+            navMenu.classList.toggle('show');
+        });
+    });
+</script>
+    
 </body>
 </html>
