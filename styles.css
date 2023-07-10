@@ -136,6 +136,19 @@ body {
     display: none;
     cursor: pointer;
 }
+.nav-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: white;
+}
+
+.nav-toggle i {
+    font-size: 20px;
+}
+
+
 
 .nav-toggle span,
 .nav-toggle span::before,
