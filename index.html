@@ -3,65 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rescued Eats</title>
+    <title>Document</title>
     <link rel="stylesheet" href="styles.css">
-    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-
-    <style>
-        body {
-            background-image: url('./images/la2.jpg');
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-        }
-        
-        .hero {
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            text-align: center;
-        }
-    </style>
-  
 </head>
 <body>
-    <nav>
-        <div class="navbar">
-            <div class="logo">Rescued Eats</div>
-            <input type="checkbox" id="nav-toggle">
-            <label for="nav-toggle" class="nav-toggle">
-                <i class="fas fa-bars"></i>
-            </label>
-            
-            <ul class="nav-menu">
-                <li><a href="#" class="active">Home</a></li>
-                <li><a href="./about.html">About</a></li>
-                <li><a href="./resource.html">Resource</a></li>
-                <li><a href="./login.html">Login/Signup</a></li>
-            </ul>
+    <header>
+        <div class="logo">
+            <img src="./images/logo.png" alt="">
         </div>
-    </nav>
+        <input type="checkbox" name="" id="nav_check" hidden>
+        <nav>
+            <!-- <div class="logo">
+                <img src="./images/logo.png" alt="">
+            </div> -->
+            <ul>
+                <li>
+                    <a href="index.html" class="">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About Us</a>
+                </li>
+                <li>
+                    <a href="resource.html">Resources</a>
+                </li>
+                <li>
+                    <a href="login.html" class="active">Login/Signup</a>
+                </li>
+            </ul>
+        </nav>
+        <label for="nav_check" class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+    </header>
 
-    <section class="hero">
-        <h2>Welcome to Rescued Eats!</h2><br><br><br>
-        <span>Helping you reduce food waste and make a positive impact.</span><br>
-        <a href="forms.html" class="btn">Get Started</a>
-    </section>
-    
+    <!-- Main section -->
+   <!-- ... (existing code) ... -->
+
+    <!-- Main section -->
+    <!-- ... (existing code) ... -->
+
+    <!-- Main section -->
+    <!-- ... (existing code) ... -->
+
+    <!-- Main section -->
+<!-- ... (existing code) ... -->
+
+    <!-- Main section -->
+    <main>
+        <section class="main-content">
+            <div class="left-side">
+                <div class="text-box">
+                    <h1>Welcome to Our Rescued Eats</h1>
+                    <p>Helping you reduce food waste and make a positive impact.</p>
+                    <button><a href="about.html">Get to Know Us</a></button>
+                </div>
+            </div>
+            <div class="right-side">
+                <img src="./images/Beet.gif" alt="Running GIF">
+            </div>
+        </section>
+
+        <section class="quote-section">
+            <div class="quote">
+                <p>"Waste not, want not. Together, we can create a world where no one goes hungry."</p>
+                <p class="author">- Rescued Eats</p>
+            </div>
+            <div class="quote">
+                <p>"Every meal saved is a lifeline for someone in need. Let's make every bite count."</p>
+                <p class="author">- Together, We Can</p>
+            </div>
+        </section>
+    </main>
+
+<!-- ... (existing code) ... -->
+
+
+<!-- ... (existing code) ... -->
+
+
+<!-- ... (existing code) ... -->
+
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Zero Food Waste. All rights reserved.</p>
+        <p>&copy; 2023 Rescued Eats. All rights reserved.</p>
     </footer>
 
-    
     <script>
-    document.addEventListener('DOMContentLoaded', function () {
-        var navToggle = document.getElementById('nav-toggle');
-        var navMenu = document.querySelector('.navbar .nav-menu');
-
-        navToggle.addEventListener('click', function () {
-            navMenu.classList.toggle('show');
-        });
-    });
-</script>
+        // Close the hamburger menu when a link is clicked
+        const navLinks = document.querySelectorAll("nav ul li a");
+        const hamburger = document.getElementById("nav_check");
     
+        navLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                hamburger.checked = false;
+            });
+        });
+    </script>
+    
+
 </body>
 </html>

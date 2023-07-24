@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,30 +8,57 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
             margin: 0;
             padding: 0;
+            background-image: url("./images/pic.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
         }
-        
+
         .container {
-            max-width: 400px;
+            display: flex;
+            max-width: 800px;
             margin: 100px auto;
-            padding: 40px;
-            background-color: #fff;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
             border-radius: 4px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-        
+
+        .left-side {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .right-side {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .left-side h2 {
+            font-size: 28px;
+            color: #4e0958;
+            margin-bottom: 20px;
+        }
+
+        .left-side p {
+            font-size: 16px;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 30px;
+        }
+
         .form-group {
             margin-bottom: 20px;
         }
-        
+
         label {
             display: block;
             font-weight: bold;
             margin-bottom: 5px;
         }
-        
+
         .form-control {
             width: 100%;
             padding: 10px;
@@ -38,12 +66,12 @@
             border-radius: 4px;
             transition: border-color 0.3s ease;
         }
-        
+
         .form-control:focus {
             outline: none;
             border-color: #4e0958;
         }
-        
+
         .btn {
             display: inline-block;
             background-color: #4e0958;
@@ -53,34 +81,49 @@
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
         }
-        
+
         .btn:hover {
             background-color: #650f4b;
         }
+
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h2>Login/Signup Form</h2>
-        <form>
-            <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password" required>
-            </div>
-            <div class="form-group">
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirm your password" required>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Login" class="btn">
-                <input type="submit" value="Sign Up" class="btn">
-            </div>
-        </form>
+        <div class="left-side">
+            <h2>Welcome to Rescued Eats!</h2>
+            <p>Thank you for visiting our website. We are excited to have you here!</p>
+            <button class="btn">Go back to Homepage</button>
+        </div>
+
+        <div class="right-side">
+            <h2>Login/Signup Form</h2>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" class="form-control" placeholder="Enter your password"
+                        required>
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password</label>
+                    <input type="password" id="confirm-password" name="confirm-password" class="form-control"
+                        placeholder="Confirm your password" required>
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login" class="btn">
+                    <input type="submit" value="Sign Up" class="btn">
+                </div>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>
