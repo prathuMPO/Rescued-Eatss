@@ -81,16 +81,69 @@
             flex: 1 1 100%;
           }
         }
+        /* Card animation */
+.animate-fade-in {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Card hover effect */
+.resource-card {
+    /* existing styles */
+    transition: box-shadow 0.3s ease;
+}
+
+.resource-card:hover {
+    box-shadow: 0 4px 8px rgba(168, 39, 39, 0.1);
+    transform: scale(1.05);
+    background-color: #7083e2;
+    color: #fff;
+    cursor: pointer;
+}
+/* Keyframe animation for headings */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Keyframe animation for resource boxes */
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply animations to headings and resource boxes */
+h2 {
+    animation: fadeInUp 1s ease forwards;
+}
+
+.resource-card {
+    animation: scaleIn 1s ease forwards;
+}
+
+
     </style>
     <title>Document</title>
-    <script>
-        function openArticle(url) {
-            window.open(url, '_blank');
-        }
-    </script>
+    
 </head>
 <body>
-    <div class="resources-container">
+    <div class="resources-container animate-fade-in fade-in">
         <h2>Resources</h2>
         <section class="resources">
             <div class="resource-card" onclick="openArticle('article1.html')">
@@ -105,7 +158,7 @@
             </div>
         
         
-            <div class="resource-card" onclick="openArticle('article3.html')">
+            <div class="resource-card" onclick="openArticle('ar3.html')">
                 <h3>Statistical Reports</h3>
                 <p>Analyze statistical reports to gain insights and make informed decisions for addressing food waste challenges effectively.</p>
             </div>
@@ -121,5 +174,10 @@
             </div>
        
     </div>
+    <script>
+        function openArticle(url) {
+            window.open(url, '_blank');
+        }
+    </script>
 </body>
 </html>

@@ -7,7 +7,7 @@
     <title>About Us</title>
     <style>
         body {
-            background-image: url("./images/abt.png");
+            background-image: url("./images/abt2.avif");
             background-size: cover;
             background-repeat: no-repeat;
             font-size: 20px;
@@ -16,21 +16,108 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
+            animation: fadeIn 1s;
+            padding-top: 40px; /* Add padding to the top to create space for the heading */
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
         }
 
         section {
             width: 80%;
             max-height: 60vh;
-            
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
             margin-bottom: 20px;
+            animation: slideIn 1s;
+            transition: transform 0.5s;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-50px);
+            }
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        section:hover {
+            transform: scale(1.02);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            animation: pulse 2s infinite;
+            font-size: 75px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            background-image: linear-gradient(to right, #ff4500, #ffd700);
+            background-clip: text;
+            -webkit-background-clip: text;
+            filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.3));
+            transition: font-size 0.5s ease-in-out;
+            margin-bottom: 20px; /* Add margin at the bottom to avoid overlapping */
+        }
+
+        h1:hover {
+            font-size: 90px;
+            animation: shake 0.5s;
+        }
+
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+            25% {
+                transform: translateX(-10px);
+            }
+            50% {
+                transform: translateX(10px);
+            }
+            75% {
+                transform: translateX(-5px);
+            }
+            100% {
+                transform: translateX(5px);
+            }
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 21px;
+            line-height: 1.4;
         }
     </style>
 </head>
 <body>
-    <h1>ABOUT US</h1>
+    <div style="text-align: center;">
+        <h1>ABOUT US</h1>
+    </div>
 
     <section>
         <h2>About Us</h2>
@@ -68,6 +155,5 @@
             restaurant owners are able to demonstrate their dedication to this important cause.
         </p>
     </section>
-
 </body>
 </html>

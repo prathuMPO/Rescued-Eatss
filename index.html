@@ -43,7 +43,26 @@
         font-size: 16px;
         transition: background-color 0.3s ease-in-out; /* Add transition effect for smoother hover */
     }
+       /* Fade-in animation */
+       .animate-fade-in {
+        opacity: 0;
+    }
 
+    .fade-in {
+        opacity: 1;
+        transition: opacity 1s ease-in-out;
+    }
+
+    /* Slide-in animation */
+    .animate-slide-in {
+        transform: translateX(100px);
+    }
+
+    .slide-in {
+        transform: translateX(0);
+        transition: transform 1s ease-in-out;
+    }
+    
     /* Adjust the styles for the search bar on smaller screens */
     @media screen and (max-width: 768px) {
         .search-bar {
@@ -64,6 +83,27 @@
     #search-button:hover {
         background-color: #0056b3;
     }
+
+    /* Text box animation */
+.animate-fade-in {
+    opacity: 0;
+}
+
+.fade-in {
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Image animation */
+.animate-slide-in {
+    transform: translateX(100px);
+}
+
+.slide-in {
+    transform: translateX(0);
+    transition: transform 1s ease-in-out;
+}
+
 </style>
 
 </head>
@@ -111,32 +151,26 @@
         </label>
     </header>
 
-    <!-- Main section --> 
-   <!-- ... (existing code) ... -->
+    
 
     <!-- Main section -->
-    <!-- ... (existing code) ... -->
-
-    <!-- Main section -->
-    <!-- ... (existing code) ... -->
-
-    <!-- Main section -->
-<!-- ... (existing code) ... -->
-
-    <!-- Main section -->
-    <main>
-        <section class="main-content">
-            <div class="left-side">
-                <div class="text-box">
-                    <h1>Welcome to Our Rescued Eats</h1>
-                    <p>Helping you reduce food waste and make a positive impact.</p>
-                    <button><a href="about.html">Get to Know Us</a></button>
-                </div>
+   <!-- Main section -->
+<main>
+    <section class="main-content">
+        <div class="left-side animate-fade-in fade-in">
+            <div class="text-box">
+                <h1>Welcome to Our Rescued Eats</h1>
+                <p>Helping you reduce food waste and make a positive impact.</p>
+                <button><a href="about.html">Get to Know Us</a></button>
             </div>
-            <div class="right-side">
-                <img src="./images/Beet.gif" alt="Running GIF">
-            </div>
-        </section>
+        </div>
+        <div class="right-side animate-slide-in slide-in">
+            <img src="./images/Beet.gif" alt="Running GIF">
+        </div>
+    </section>
+
+   
+
 
         <section class="quote-section">
             <div class="quote">
@@ -149,14 +183,6 @@
             </div>
         </section>
     </main>
-
-<!-- ... (existing code) ... -->
-
-
-<!-- ... (existing code) ... -->
-
-
-<!-- ... (existing code) ... -->
 
 
     <!-- Footer -->
@@ -209,6 +235,7 @@
         }
     }
 </script>
+
 
 <script src="https://kit.fontawesome.com/3ae3a66a62.js" crossorigin="anonymous"></script>
 

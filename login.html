@@ -10,7 +10,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-image: url("./images/pic.jpg");
+            background-image: url("./images/cont2.jpg");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -89,6 +89,12 @@
             background-color: #650f4b;
         }
 
+        .btn a{
+            color: #fff;
+            text-decoration: none;
+
+        }
+
     </style>
 </head>
 
@@ -97,7 +103,7 @@
         <div class="left-side">
             <h2>Welcome to Rescued Eats!</h2>
             <p>Thank you for visiting our website. We are excited to have you here!</p>
-            <button class="btn">Go back to Homepage</button>
+            <button class="btn"><a href="index.html">GO Back TO Home Page</a></button>
         </div>
 
         <div class="right-side">
@@ -124,6 +130,14 @@
             </form>
         </div>
     </div>
+    
+    <script>
+        function submitForm(event) {
+            event.preventDefault(); // Prevent form submission
+            // Show the "Thank you" message
+            alert("Thank you! We will reach out to you soon.");
+        }
+    </script>
 </body>
 
 </html>
